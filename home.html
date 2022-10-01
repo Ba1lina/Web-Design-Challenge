@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>City Latitude vs Wind Speed</title>
+        <title>World Weather Analysis</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link rel="stylesheet" href="assets/css/styles.css"/>
@@ -18,7 +18,8 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">Visualisations</a></li>
                         <li class="nav-item"><a class="nav-link" href="comparisons.html">Comparison</a></li>
                         <li class="nav-item"><a class="nav-link" href="data.html">Data</a></li>
                     </ul>
@@ -29,8 +30,9 @@
         <header class="masthead text-center text-white">
             <div class="masthead-content">
                 <div class="container px-5">
-                    <h1 class="masthead-heading mb-0">City Latitude vs Wind Speed</h1>
-                    <h2 class="masthead-subheading mb-0">Comparison</h2>
+                    <h1 class="masthead-heading mb-0">World Weather Analysis (WWA)</h1>
+                    <h2 class="masthead-subheading mb-0">Analysis of Latitude</h2>
+                    <a class="btn btn-primary btn-xl rounded-pill mt-5" href="#scroll">Learn More</a>
                 </div>
             </div>
             <div class="bg-circle-1 bg-circle"></div>
@@ -42,12 +44,39 @@
         <section id="scroll">
             <div class="container px-5">
                 <div class="row gx-5 align-items-center">
-                    <div class="col-lg-6 order-lg-1">
-                        <div class="p-5"><img src="assets/img/Fig4.png" alt="Latitude vs Wind Speed" /></div>
+                    <div class="col-lg-6 order-lg-2">
+                        <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/CityHeatMap.png" alt="Humidity Heat Map" /></div>
                     </div>
                     <div class="col-lg-6 order-lg-1">
                         <div class="p-5">
-                            <p>The analysis of City Latitude plotted against Wind Speed. From the data points above there is little correlation between the Wind Speed and Latitude of a City. On average the Wind Speed is mostly between 2-4m/s. </p>
+                            <h2 class="display-4">PyCity</h2>
+                            <p>The purpose of the WWA was to analyse how weather changes according to where you are in terms of latitude. First, I generated a random selection longtitudes and latitudes. Using these random pairings I used PyCity to name the cities at these random coordinates. After this process I had 600+ cities to work with.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Content section 2-->
+        <section>
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="p-5">
+                            <h2 class="display-4">Open Weather Map</h2>
+                            <p>Using the random cities generated I pulled the weather data for those cities uding the Open Weather Map. The API used was for Current Data only.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Content section 3-->
+        <section>
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="p-5">
+                            <h2 class="display-4">Analysis</h2>
+                            <p>Once the data was gathered that is when analysis of the cities latitude vs other factors was done using python and jupyter notebook. The results of the Analysis can be found in the Visualisations pages and the data for the analysis can be found in the Data page.</p>
                         </div>
                     </div>
                 </div>
